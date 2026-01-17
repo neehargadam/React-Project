@@ -5,6 +5,7 @@ function DataBindingState() {
 
    const[price,setPrice]=useState(0);
    const[itemName,setItemName]=useState("");
+   const[views]=useState(1299956674)
    useEffect(()=>{
     setName("Neehar Gadam");
     setItemName("Laptop");
@@ -16,6 +17,7 @@ function DataBindingState() {
             <p> Welcome {getName} </p>
             <p>Item : {itemName}</p>
             <p>Price : {price}</p>
+            <p>Views : {views.toLocaleString('en-us',{notation:'compact'})}</p>  
          
         </div>
     )
