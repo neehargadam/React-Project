@@ -8,10 +8,12 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import NetflixIndex from './components/netflix/netflix-index.jsx'
 import DataBinding from './components/data-binding/data-binding.jsx'
 import DataBindingState from './components/data-binding/data-bindingState.jsx'
+import DataBindingMap from './components/data-binding/data-binding-map.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DataBindingState/>
+   <DataBindingMap/>
+    {/* <DataBindingState/> */}
     {/* <DataBinding/> */}
     {/* <NetflixIndex /> */}
   </StrictMode>,
