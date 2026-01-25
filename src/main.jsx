@@ -9,10 +9,14 @@ import NetflixIndex from './components/netflix/netflix-index.jsx'
 import DataBinding from './components/data-binding/data-binding.jsx'
 import DataBindingState from './components/data-binding/data-bindingState.jsx'
 import DataBindingMap from './components/data-binding/data-binding-map.jsx'
+import DataBindingObject from './components/data-binding/data-binding-Object.jsx'
+import DataBindingArray from './components/data-binding/data-binding-Array.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <DataBindingMap/>
+    <DataBindingArray/>
+    {/* <DataBindingObject/> */}
+   {/* <DataBindingMap/> */}
     {/* <DataBindingState/> */}
     {/* <DataBinding/> */}
     {/* <NetflixIndex /> */}
