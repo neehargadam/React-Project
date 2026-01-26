@@ -16,7 +16,7 @@ const [product, setProduct] = useState({ title: '', price: 0, image: '', rating:
         //     }
         // }
 
-        // Fetch API example
+        // Fetch API example 
         fetch("product.json")
         .then(response=>response.json())
         .then(product=>{
