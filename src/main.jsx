@@ -13,10 +13,12 @@ import DataBindingObject from './components/data-binding/data-binding-Object.jsx
 import DataBindingArray from './components/data-binding/data-binding-Array.jsx'
 import DataBindingDateExample from './components/data-binding/data-binding-date-example.jsx'
 import DataBindingJson from './components/data-binding/data-binding-json.jsx'
+import DataBindingAxiosExample from './components/data-binding/data-binding-axios-example.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DataBindingJson/>
+    <DataBindingAxiosExample/>
+    {/* <DataBindingJson/> */}
     {/* <DataBindingDateExample /> */}
     {/* <DataBindingArray/> */}
     {/* <DataBindingObject/> */}
