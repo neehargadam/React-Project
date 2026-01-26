@@ -3,17 +3,25 @@ import { useEffect, useState } from "react";
 function DataBindingJson() {
 const [product, setProduct] = useState({ title: '', price: 0, image: '', rating: { rate: 0, ratings: 0, reviews: 0 }, offers: [] });
     function GetProduct() {
-        var http = new XMLHttpRequest();
-        // http.open("get", "products.json", true);
-        http.open("GET","product.json",true)
-        http.send();
-        http.onreadystatechange = function () {
-            if (this.readyState === 4 ) {
-                console.log(this.responseText);
-                var data = JSON.parse(this.responseText);
-                setProduct(data);
-            }
-        }
+
+        //  XMLHttpRequest example 
+        // var http = new XMLHttpRequest();    
+        // http.open("GET","product.json",true)
+        // http.send();
+        // http.onreadystatechange = function () {
+        //     if (this.readyState === 4 ) {
+        //         console.log(this.responseText);
+        //         var data = JSON.parse(this.responseText);
+        //         setProduct(data);
+        //     }
+        // }
+
+        // Fetch API example
+        fetch("product.json")
+        .then(response=>response.json())
+        .then(product=>{
+            setProduct(product)
+        })
     }
         useEffect(() => {
             GetProduct();
