@@ -12,10 +12,12 @@ import DataBindingMap from './components/data-binding/data-binding-map.jsx'
 import DataBindingObject from './components/data-binding/data-binding-Object.jsx'
 import DataBindingArray from './components/data-binding/data-binding-Array.jsx'
 import DataBindingDateExample from './components/data-binding/data-binding-date-example.jsx'
+import DataBindingJson from './components/data-binding/data-binding-json.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DataBindingDateExample />
+    <DataBindingJson/>
+    {/* <DataBindingDateExample /> */}
     {/* <DataBindingArray/> */}
     {/* <DataBindingObject/> */}
    {/* <DataBindingMap/> */}
