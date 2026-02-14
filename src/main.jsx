@@ -16,10 +16,12 @@ import DataBindingJson from './components/data-binding/data-binding-json.jsx'
 import DataBindingAxiosExample from './components/data-binding/data-binding-axios-example.jsx'
 import EventBinding from './components/event-binding/event-binding.jsx'
 import BubblingEventExample from './components/event-binding/bubbling-EventExample.jsx'
+import ReactTwoWayBindingExample from './components/event-binding/ReactTwoWayBindingExample.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BubblingEventExample/>
+    <ReactTwoWayBindingExample/>
+    {/* <BubblingEventExample/> */}
     {/* <EventBinding/> */}
     {/* <DataBindingAxiosExample/> */}
     {/* <DataBindingJson/> */}
