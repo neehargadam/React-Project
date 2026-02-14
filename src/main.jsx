@@ -15,10 +15,12 @@ import DataBindingDateExample from './components/data-binding/data-binding-date-
 import DataBindingJson from './components/data-binding/data-binding-json.jsx'
 import DataBindingAxiosExample from './components/data-binding/data-binding-axios-example.jsx'
 import EventBinding from './components/event-binding/event-binding.jsx'
+import BubblingEventExample from './components/event-binding/bubbling-EventExample.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <EventBinding/>
+    <BubblingEventExample/>
+    {/* <EventBinding/> */}
     {/* <DataBindingAxiosExample/> */}
     {/* <DataBindingJson/> */}
     {/* <DataBindingDateExample /> */}
