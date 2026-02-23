@@ -17,10 +17,12 @@ import DataBindingAxiosExample from './components/data-binding/data-binding-axio
 import EventBinding from './components/event-binding/event-binding.jsx'
 import BubblingEventExample from './components/event-binding/bubbling-EventExample.jsx'
 import ReactTwoWayBindingExample from './components/event-binding/ReactTwoWayBindingExample.jsx'
+import { MouseDemo } from './components/mouse-demo/mouse-demo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ReactTwoWayBindingExample/>
+    <MouseDemo/>
+    {/* <ReactTwoWayBindingExample/> */}
     {/* <BubblingEventExample/> */}
     {/* <EventBinding/> */}
     {/* <DataBindingAxiosExample/> */}
