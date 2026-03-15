@@ -20,10 +20,12 @@ import ReactTwoWayBindingExample from './components/event-binding/ReactTwoWayBin
 import { MouseDemo } from './components/mouse-demo/mouse-demo.jsx'
 import { MouseAnimation } from './components/mouse-animation/mouse-animation.jsx'
 import { MouseMove } from './components/mouse-move/mouse-move.jsx'
+import KeyDemo from './components/keydemo/keydemo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MouseMove/>
+    <KeyDemo/>
+    {/* <MouseMove/> */}
     {/* <MouseAnimation/> */}
     {/* <MouseDemo/> */}
     {/* <ReactTwoWayBindingExample/> */}
