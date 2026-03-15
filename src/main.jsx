@@ -18,10 +18,14 @@ import EventBinding from './components/event-binding/event-binding.jsx'
 import BubblingEventExample from './components/event-binding/bubbling-EventExample.jsx'
 import ReactTwoWayBindingExample from './components/event-binding/ReactTwoWayBindingExample.jsx'
 import { MouseDemo } from './components/mouse-demo/mouse-demo.jsx'
+import { MouseAnimation } from './components/mouse-animation/mouse-animation.jsx'
+import { MouseMove } from './components/mouse-move/mouse-move.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MouseDemo/>
+    <MouseMove/>
+    {/* <MouseAnimation/> */}
+    {/* <MouseDemo/> */}
     {/* <ReactTwoWayBindingExample/> */}
     {/* <BubblingEventExample/> */}
     {/* <EventBinding/> */}
