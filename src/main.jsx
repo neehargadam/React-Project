@@ -21,10 +21,12 @@ import { MouseDemo } from './components/mouse-demo/mouse-demo.jsx'
 import { MouseAnimation } from './components/mouse-animation/mouse-animation.jsx'
 import { MouseMove } from './components/mouse-move/mouse-move.jsx'
 import KeyDemo from './components/keydemo/keydemo.jsx'
+import EMICalculator from './components/emi-calculator/emi-calculator.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <KeyDemo/>
+    <EMICalculator/>
+    {/* <KeyDemo/> */}
     {/* <MouseMove/> */}
     {/* <MouseAnimation/> */}
     {/* <MouseDemo/> */}
