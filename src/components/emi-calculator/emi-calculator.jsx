@@ -4,6 +4,8 @@ function EMICalculator() {
     const [amount,setAmount]=useState(100000); 
     const[years,setYears]=useState(1);
     const[rate,setRate]=useState(10.45);
+    const[emi,setEmi]=useState(0);
+    const[toggleResult,setToggleResult]=useState('d-none');
 
 
     function handleAmountChange(e)
@@ -17,6 +19,16 @@ function EMICalculator() {
         setRate(e.target.value);
     }
 
+    function handleCalculateClick()
+    {
+        var P= parseInt(amount);
+        var N= parseInt(years)*12;
+        var R= parseFloat(rate)/100/12;
+        var EMI= (P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
+        setEmi(EMI);
+        setToggleResult('d-block');
+    }
+
   return (
     <div className="container-fluid">
       <div className="p-4 border border-2 mt-4">
@@ -26,7 +38,7 @@ function EMICalculator() {
             Amount you need &#8377; <input type="text" size="10" value={amount} onChange={handleAmountChange}/>
           </div>
           <div className="col">
-            for <input type="text" size="2" value={years} onChange={handleYearsChange}/> years
+            for <input type="text" size="4" value={years} onChange={handleYearsChange}/> years
           </div>
           <div className="col">
             interest rate <input type="text" size="2" value={rate} onChange={handleRateChange}/> %
@@ -34,14 +46,14 @@ function EMICalculator() {
         </div>
         <div className="my-4 row">
           <div className="col">
-            <input type="range" className="form-range" min="100000" max="1000000" value={amount} onChange={handleAmountChange}/>
+            <input type="range" className="form-range" min="100000" max="1000000" value={amount} onChange={handleAmountChange} step="1000"/>
             <div>
               <span>&#8377; 1,00,000/-</span>
               <span className="float-end">&#8377; 10,00,000/-</span>
             </div>
           </div>
           <div className="col">
-            <input type="range" className="form-range" min="1" max="5" value={years} onChange={handleYearsChange}/>
+            <input type="range" className="form-range" min="1" max="5" value={years} onChange={handleYearsChange} step="1"/>
             <div>
               <span>1 Year</span>
               <span className="float-end">5 Years</span>
@@ -57,14 +69,15 @@ function EMICalculator() {
         </div>
         <div className="row mt-5">
           <div className="col text-end">
-            <button className="btn btn-primary">Calculate</button>
+            <button className="btn btn-primary" onClick={handleCalculateClick}>
+              Calculate
+            </button>
           </div>
         </div>
-        <div className={`row mt-5 `}>
+        <div className={`row mt-5 ${toggleResult}`}>
         <div className="col">
             <div className="text-center fs-4">
-              Your EMI amount is <span className="fw-bold"></span> for next
-              months.
+              Your EMI amount is {emi.toLocaleString(2)} for next {years} years ( {years*12} months ).
             </div>
           </div>
         </div>
