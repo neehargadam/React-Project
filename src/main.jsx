@@ -24,10 +24,12 @@ import KeyDemo from './components/keydemo/keydemo.jsx'
 import EMICalculator from './components/emi-calculator/emi-calculator.jsx'
 import ButtonDemo from './components/button-demo/button-demo.jsx'
 import DebounceDemo from './components/debounce-demo/debounce-demo.jsx'
+import ThrottleDemo from './components/throttle-demo/throttle-demo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DebounceDemo/>
+    <ThrottleDemo/>
+    {/* <DebounceDemo/> */}
     {/* <ButtonDemo/> */}
     {/* <EMICalculator/> */}
     {/* <KeyDemo/> */}
